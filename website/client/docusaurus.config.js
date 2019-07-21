@@ -4,7 +4,7 @@ module.exports = {
   title: 'effector',
   tagline: 'The tagline of my site',
   url: 'https://your-docusaurus-test-site.com',
-  baseUrl: '/',
+  baseUrl: '/static/',
   // editUrl: 'https://github.com/zerobias/effector/tree/master/docs/',
   favicon: 'img/favicon.ico',
   organizationName: 'facebook', // Usually your GitHub org/user name.
