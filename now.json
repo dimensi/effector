@@ -72,6 +72,7 @@
         "cache-control": "s-maxage=1000"
       }
     },
+    { "handle": "filesystem" },
     {
       "src": "/(.*)",
       "dest": "/website/client/index.html"
