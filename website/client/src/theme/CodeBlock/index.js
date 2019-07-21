@@ -1,6 +1,8 @@
 // @flow
 
-import React, {useEffect, useState, useRef} from 'react'
+import * as React from 'react'
+import {useEffect, useState, useRef} from 'react'
+
 import classnames from 'classnames'
 import Highlight, {defaultProps} from 'prism-react-renderer'
 import nightOwlTheme from 'prism-react-renderer/themes/nightOwl'
@@ -8,7 +10,15 @@ import Clipboard from 'clipboard'
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
 import styles from './styles.module.css'
 
-export default ({children, className: languageClassName}) => {
+export default ({
+  children,
+  className: languageClassName,
+  repl,
+}: {
+  children: React.Node,
+  className: string,
+  repl: boolean,
+}) => {
   const {
     siteConfig: {
       themeConfig: {prismTheme},

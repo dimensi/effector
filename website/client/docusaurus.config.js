@@ -1,9 +1,4 @@
-/**
- * Copyright (c) 2017-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
+const path = require('path')
 
 module.exports = {
   title: 'effector',
@@ -69,6 +64,7 @@ module.exports = {
       copyright: `Copyright © ${new Date().getFullYear()} Facebook, Inc. Built with Docusaurus.`,
     },
   },
+  plugins: [path.resolve(__dirname, './plugins/flow.js')],
   presets: [
     [
       '@docusaurus/preset-classic',
