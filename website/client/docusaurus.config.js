@@ -1,14 +1,16 @@
 const path = require('path')
 
+const url = process.env.SITE_URL || 'https://effector.now.sh'
+
 module.exports = {
   title: 'effector',
   tagline: 'The tagline of my site',
-  url: 'https://your-docusaurus-test-site.com',
-  baseUrl: '/static/',
+  url,
+  baseUrl: '/',
   // editUrl: 'https://github.com/zerobias/effector/tree/master/docs/',
   favicon: 'img/favicon.ico',
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'zerobias', // Usually your GitHub org/user name.
+  projectName: 'effector', // Usually your repo name.
   themeConfig: {
     navbar: {
       title: 'effector',
