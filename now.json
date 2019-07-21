@@ -1,17 +1,17 @@
 {
   "name": "effector",
   "version": 2,
-  "alias": ["effector.now.sh"],
+  "alias": ["alpha.effector.now.sh"],
   "build": {
     "env": {
-      "SITE_URL": "https://effector.now.sh"
+      "SITE_URL": "https://alpha.effector.now.sh"
     }
   },
   "builds": [
     {
       "src": "website/client/package.json",
       "use": "@now/static-build",
-      "config": {"distDir": "build/effector"}
+      "config": {"distDir": "build"}
     },
     {
       "src": "website/editor/package.json",
