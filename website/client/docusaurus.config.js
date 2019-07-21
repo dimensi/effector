@@ -19,10 +19,11 @@ module.exports = {
         src: 'img/comet.png',
       },
       links: [
-        {to: 'docs/doc1', label: 'Docs', position: 'left'},
+        {to: 'docs/introduction/installation', label: 'Docs', position: 'left'},
+        {to: 'docs/api/effector/effector', label: 'API', position: 'left'},
         {to: 'blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/zerobias/effector',
           label: 'GitHub',
           position: 'right',
         },
@@ -35,8 +36,12 @@ module.exports = {
           title: 'Docs',
           items: [
             {
-              label: 'Docs',
-              to: 'docs/doc1',
+              label: 'Getting Started',
+              to: 'docs/introduction/installation',
+            },
+            {
+              label: 'API Reference',
+              to: 'docs/api/effector/effector',
             },
           ],
         },
@@ -63,7 +68,7 @@ module.exports = {
         alt: 'Facebook Open Source Logo',
         src: 'https://docusaurus.io/img/oss_logo.png',
       },
-      copyright: `Copyright © ${new Date().getFullYear()} Facebook, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} zerobias, Inc. Built with Docusaurus.`,
     },
   },
   plugins: [path.resolve(__dirname, './plugins/flow.js')],
