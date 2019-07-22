@@ -4,7 +4,7 @@ title: 'Example: Effects'
 sidebar_label: 'Example: Effects'
 ---
 
-```js
+```jsx repl
 import React from 'react'
 import ReactDOM from 'react-dom'
 
