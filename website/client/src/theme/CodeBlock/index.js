@@ -3,20 +3,20 @@
 import * as React from 'react'
 import {useEffect, useState, useRef} from 'react'
 
-
 import classnames from 'classnames'
 import Highlight, {defaultProps} from 'prism-react-renderer'
 import nightOwlTheme from 'prism-react-renderer/themes/nightOwl'
 import Clipboard from 'clipboard'
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
 import styles from './styles.module.css'
+import Playground from '../Playground'
 
 export default ({
   children,
   className: languageClassName,
   repl,
 }: {
-  children: React.Node,
+  children: string,
   className: string,
   repl: boolean,
 }) => {
@@ -55,9 +55,22 @@ export default ({
     setTimeout(() => setShowCopied(false), 2000)
   }
 
+  if (repl) {
+    return (
+      <Playground
+        handleCopyCode={handleCopyCode}
+        showCopied={showCopied}
+        language={language}
+        button={button}
+        target={target}
+        prismTheme={prismTheme}>
+        {children}
+      </Playground>
+    )
+  }
+
   return (
     <>
-      HELLO
       <Highlight
         {...defaultProps}
         theme={prismTheme || nightOwlTheme}
